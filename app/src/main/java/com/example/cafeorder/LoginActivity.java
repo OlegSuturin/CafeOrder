@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
             intent.putExtra("name", name);
             intent.putExtra("password", password);
             startActivity(intent);
-        }else{					//отправляем всплывающее сообщение
+        }else{					//отправляем всплывающее сообщение на экран
             Toast.makeText(this, R.string.worning_fields, Toast.LENGTH_LONG).show();
         }
 
