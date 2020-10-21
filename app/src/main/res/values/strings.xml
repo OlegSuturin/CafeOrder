@@ -7,7 +7,17 @@
     <string name="butoon_create_order">СОЗДАТЬ ЗАКАЗ</string>
     <string name="title_activity_create_order">CreateOrderActivity</string>
     <string name="worning_fields">Все поля должны быть заполнены</string>
+    <string-array name="options_of_tea">
+        <item>Черный</item>
+        <item>Зеленый</item>
+        <item>Красный</item>
+    </string-array>
 
+    <string-array name="options_of_cofee">
+        <item>Американо</item>
+        <item>Эспрессо</item>
+        <item>Латте</item>
+    </string-array>
 
 
 
