@@ -4,101 +4,146 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightBrown"
     tools:context=".CreateOrderActivity">
 
     <TextView
         android:id="@+id/textViewHello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Здравствуйте, Клиент! Что будете заказывать?"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/hello_user"
+        android:textColor="@color/darkBrown"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/textViewHello"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/textViewHello">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Чай"/>
+            android:layout_margin="8dp"
+            android:text="@string/tea"
+            android:textColor="@color/white" />
+
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Кофе" />
+            android:layout_margin="8dp"
+            android:text="@string/cofee"
+            android:textColor="@color/white" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/textViewAdditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Что добавить в Ваш чай?"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"
+        android:text="@string/additions"
+        android:textColor="@color/darkBrown"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
 
     <CheckBox
         android:id="@+id/checkBoxMilk"
-        android:text="Молоко"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textViewAdditions"
+        android:layout_margin="8dp"
+        android:text="@string/milk"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/checkBoxSugar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/checkBoxSugar"/>
+        app:layout_constraintTop_toBottomOf="@id/textViewAdditions" />
+
 
     <CheckBox
         android:id="@+id/checkBoxSugar"
-        android:text="Сахар"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textViewAdditions"
+        android:layout_margin="8dp"
+        android:text="@string/sugar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/checkBoxLemon"
         app:layout_constraintStart_toEndOf="@id/checkBoxMilk"
-        app:layout_constraintEnd_toStartOf="@id/checkBoxLemon"  />
+        app:layout_constraintTop_toBottomOf="@id/textViewAdditions" />
+
     <CheckBox
         android:id="@+id/checkBoxLemon"
-        android:text="Лемон"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textViewAdditions"
+        android:layout_margin="8dp"
+        android:text="@string/lemon"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/checkBoxSugar"
-        app:layout_constraintEnd_toEndOf="parent"   />
+        app:layout_constraintTop_toBottomOf="@id/textViewAdditions" />
 
     <TextView
         android:id="@+id/textViewChooseDrink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Выберете вид напитка"
-        app:layout_constraintTop_toBottomOf="@id/checkBoxSugar"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"
+        android:text="@string/chooseDrink"
+        android:textColor="@color/darkBrown"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxSugar" />
 
     <Spinner
         android:id="@+id/spinnerTea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textViewChooseDrink"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"
+        android:background="@color/lightBrown"
         android:entries="@array/options_of_tea"
-        />
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewChooseDrink" />
 
     <Spinner
         android:id="@+id/spinnerCofee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textViewChooseDrink"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"
+        android:background="@color/lightBrown"
         android:entries="@array/options_of_cofee"
-        />
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewChooseDrink" />
+
+    <ImageView
+        android:id="@+id/buttonSendOrder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/dscr_img"
+        android:src="@drawable/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerTea" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
